@@ -7,6 +7,8 @@ const formats = require('../lib/data/formats.json')
 const pkg = require('../package.json')
 
 module.exports.handleUpload = (request, reply) => {
+
+  console.log("CONVERT", request.payload);
   const convertToFormat = request.params.format
   const data = request.payload
   if (data.file) {
